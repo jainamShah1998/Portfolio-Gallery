@@ -6,7 +6,6 @@
     <meta name="keywords" content="Data Analytics, Power BI, Cloud Architecture, Big Data, AWS, Adobe Analytics, Google Analytics">
     <meta name="author" content="Jainam Shah">
     <link rel="stylesheet" href="style.css">
-    <title>Jainam Shah - Portfolio</title>
 </head>
 <body>
 
