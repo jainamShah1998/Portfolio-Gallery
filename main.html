@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jainam Shah's Portfolio - Data Analytics, Power BI, Cloud Architecture">
+    <meta name="description" content="Jainam Shah's Portfolio - Data Analytics, Power BI, Cloud Architecture, Big Data, AWS, Adobe Analytics, Google Analytics, Marketing Strategy Implementation">
     <meta name="keywords" content="Data Analytics, Power BI, Cloud Architecture, Big Data, AWS, Adobe Analytics, Google Analytics">
     <meta name="author" content="Jainam Shah">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <title>Jainam Shah's Portfolio</title>
 </head>
 <body>
@@ -26,17 +27,19 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="outer-perimeter"></div>
+        <div class="profile-icon">
+            <img src="images/pic.jpg" class="profile-pic" alt="Profile picture of Jainam Shah">
+        </div>
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Jainam Shah</h1>
                 <p>Web Analytics & Data Visualization Specialist</p>
                 <p>Proficient in Marketing Strategy Implementation & Big Data Tools</p>
             </div>
-            <div class="profile-icon">
-                <img src="images/pic.jpg" class="profile-pic" alt="Jainam Shah">
-            </div>
         </div>
     </section>
+
 
     <!-- About Section -->
     <section id="about">
@@ -123,7 +126,7 @@
                     <span class="toggle-icon">+</span>
                     <div class="project-details">
                         <div class="iframe-container">
-                            <iframe src="images/Dataset Exploration.pdf"></iframe>
+                            <iframe src="images/Dataset Exploration.pdf#toolbar=0"></iframe>
                         </div>
                     </div>
                 </li>
@@ -173,6 +176,15 @@
                 icon.textContent = '-';
             }
         }
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 
 </body>

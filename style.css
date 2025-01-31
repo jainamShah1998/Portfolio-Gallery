@@ -49,51 +49,56 @@ nav ul li a:hover {
     color: #3498db;
 }
 
-/* Header */
+/* Hero Section */
 .hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 5rem 1rem;
-    background: #2980b9;
-    color: white;
-    position: relative;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero-text {
-    max-width: 600px;
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.hero-text p {
-    font-size: 1.2rem;
-}
-
-.profile-icon {
-    display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #2980b9, #3498db);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Profile Picture */
+.profile-icon {
+    margin-top: -40px; /* Move it slightly down */
+    z-index: 1100; /* Ensure it is above the navigation menu */
 }
 
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 150px; /* Adjusted size */
+    height: 150px; /* Adjusted size */
     border-radius: 50%;
     border: 4px solid white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Inner and Outer Perimeter */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 1000;
+}
+
+.outer-perimeter {
+    background: white;
+    padding: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px; /* Adjusted for better alignment */
+    z-index: 1090; /* Ensure it is below the profile picture but above the hero content */
 }
 
 /* Sections */
@@ -122,8 +127,8 @@ section h2 {
 }
 
 .card {
-    width: 350px;
-    height: 250px;
+    width: 300px; /* Adjusted size */
+    height: 200px; /* Adjusted size */
     perspective: 1000px;
     cursor: pointer;
     position: relative;
