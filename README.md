@@ -8,6 +8,16 @@
     <meta name="author" content="Jainam Shah">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DJ0XY2Q5L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2DJ0XY2Q5L');
+    </script>
+    
     <title>Jainam Shah's Portfolio</title>
 </head>
 <body>
@@ -73,35 +83,6 @@
                 </div>
             </div>
         </div>
-        <div class="card-container">
-            <div class="card" onclick="toggleCard(this)">
-                <div class="front">
-                    <h3>Professional Background <span class="hint">(Click to see more)</span></h3>
-                    <p>Data Analyst with expertise in web analytics and data visualization.</p>
-                </div>
-                <div class="back">
-                    <p>With a strong foundation in web analytics, data visualization, and cloud architecture, I am a certified Data Analyst dedicated to transforming raw data into meaningful insights. Over the past two years, I have honed my skills in tools like Google Analytics, Adobe Analytics, and Adobe Target to enhance user experiences and drive informed decision-making.</p>
-                </div>
-            </div>
-            <div class="card" onclick="toggleCard(this)">
-                <div class="front">
-                    <h3>Educational Background <span class="hint">(Click to see more)</span></h3>
-                    <p>Postgraduate courses in Big Data Analytics and Cloud Architecture.</p>
-                </div>
-                <div class="back">
-                    <p>I pursued professional growth by completing postgraduate courses in Big Data Analytics and Cloud Architecture and Administration. This journey equipped me with expertise in tools such as Hadoop, Spark, Terraform, and Ansible, along with knowledge of AWS and Microsoft Azure.</p>
-                </div>
-            </div>
-            <div class="card" onclick="toggleCard(this)">
-                <div class="front">
-                    <h3>Skills & Expertise <span class="hint">(Click to see more)</span></h3>
-                    <p>Combining data, technology, and strategy to deliver results.</p>
-                </div>
-                <div class="back">
-                    <p>I thrive at the intersection of data, technology, and strategy, combining analytical expertise with a problem-solving mindset to deliver impactful results. Whether through data-driven marketing campaigns or deploying robust cloud architectures, my focus is on excellence and innovation.</p>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Projects Section -->
@@ -120,9 +101,6 @@
                         <div class="iframe-container">
                             <iframe src="images/ISO.pdf#toolbar=0"></iframe>
                         </div>
-                        <div class="iframe-container">
-                            <iframe src="images/ISO.pdf#toolbar=0"></iframe>
-                        </div>
                     </div>
                 </li>
                 <li class="project-item" onclick="toggleDetails(this)">
@@ -133,9 +111,6 @@
                         <div class="iframe-container">
                             <iframe src="images/dataAnalysis1.pdf#toolbar=0"></iframe>
                         </div>
-                        <div class="iframe-container">
-                            <iframe src="images/dataAnalysis1.pdf#toolbar=0"></iframe>
-                        </div>
                     </div>
                 </li>
                 <li class="project-item" onclick="toggleDetails(this)">
@@ -143,9 +118,6 @@
                     <p>Comprehensive data analysis of the Auto Insurance dataset using advanced techniques.</p>
                     <span class="toggle-icon">+</span>
                     <div class="project-details">
-                        <div class="iframe-container">
-                            <iframe src="images/dataAnalysis2.pdf#toolbar=0"></iframe>
-                        </div>
                         <div class="iframe-container">
                             <iframe src="images/dataAnalysis2.pdf#toolbar=0"></iframe>
                         </div>
@@ -200,9 +172,6 @@
     </footer>
 
     <script>
-        function toggleCard(card) {
-            card.classList.toggle('flipped');
-        }
         function toggleCard(card) {
             card.classList.toggle('flipped');
         }
