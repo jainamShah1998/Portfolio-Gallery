@@ -1,5 +1,14 @@
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DJ0XY2Q5L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2DJ0XY2Q5L');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jainam Shah's Portfolio - Data Analytics, Power BI, Cloud Architecture, Big Data, AWS, Adobe Analytics, Google Analytics, Marketing Strategy Implementation">
