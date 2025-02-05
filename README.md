@@ -1,14 +1,6 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DJ0XY2Q5L"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-2DJ0XY2Q5L');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jainam Shah's Portfolio - Data Analytics, Power BI, Cloud Architecture, Big Data, AWS, Adobe Analytics, Google Analytics, Marketing Strategy Implementation">
@@ -25,7 +17,6 @@
 
         gtag('config', 'G-2DJ0XY2Q5L');
     </script>
-    
     <title>Jainam Shah's Portfolio</title>
 </head>
 <body>
@@ -38,6 +29,7 @@
         <div class="logo">Jainam Shah</div>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#connect">Let's Connect</a></li>
         </ul>
@@ -89,6 +81,43 @@
                 <div class="back">
                     <p>I thrive at the intersection of data, technology, and strategy, combining analytical expertise with a problem-solving mindset to deliver impactful results. Whether through data-driven marketing campaigns or deploying robust cloud architectures, my focus is on excellence and innovation.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card" data-percentage="90">
+                <div class="circular-progress">
+                    <span class="progress-value">90%</span>
+                </div>
+                <h3>Web Analytics</h3>
+            </div>
+            <div class="skill-card" data-percentage="85">
+                <div class="circular-progress">
+                    <span class="progress-value">85%</span>
+                </div>
+                <h3>Power BI</h3>
+            </div>
+            <div class="skill-card" data-percentage="80">
+                <div class="circular-progress">
+                    <span class="progress-value">80%</span>
+                </div>
+                <h3>Data Engineering</h3>
+            </div>
+            <div class="skill-card" data-percentage="85">
+                <div class="circular-progress">
+                    <span class="progress-value">85%</span>
+                </div>
+                <h3>MS Office</h3>
+            </div>
+            <div class="skill-card" data-percentage="70">
+                <div class="circular-progress">
+                    <span class="progress-value">70%</span>
+                </div>
+                <h3>Marketing Strategy</h3>
             </div>
         </div>
     </section>
@@ -204,6 +233,38 @@
             });
         });
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const skillCards = document.querySelectorAll('.skill-card');
+    
+    const animateProgress = (entry, observer) => {
+        if (entry.isIntersecting) {
+            const skillCard = entry.target;
+            const progressBar = skillCard.querySelector('.circular-progress');
+            const value = progressBar.querySelector('.progress-value');
+            const percentage = parseInt(skillCard.getAttribute('data-percentage'), 10);
+            progressBar.style.background = `conic-gradient(#4caf50 ${percentage * 3.6}deg, #ddd 0deg)`;
+
+            let start = 0;
+            const updateValue = () => {
+                value.textContent = `${start}%`;
+                if (start < percentage) {
+                    start++;
+                    requestAnimationFrame(updateValue);
+                }
+            };
+            requestAnimationFrame(updateValue);
+            observer.unobserve(skillCard);
+        }
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => animateProgress(entry, observer));
+    }, { threshold: 0.5 });
+
+    skillCards.forEach((skillCard) => observer.observe(skillCard));
+});
+</script>
 
 </body>
 </html>

@@ -66,7 +66,7 @@ nav ul li a:hover {
 /* Profile Picture */
 .profile-icon {
     margin-top: -40px; /* Move it slightly down */
-    z-index: 1100; /* Ensure it is above the navigation menu */
+    z-index: 1; /* Ensure it is above the navigation menu */
 }
 
 .profile-pic {
@@ -89,7 +89,7 @@ nav ul li a:hover {
     margin: 0 auto;
     padding-top: 2rem;
     position: relative;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .outer-perimeter {
@@ -98,7 +98,7 @@ nav ul li a:hover {
     border-radius: 50%;
     position: absolute;
     top: -40px; /* Adjusted for better alignment */
-    z-index: 1090; /* Ensure it is below the profile picture but above the hero content */
+    z-index: 1; /* Ensure it is below the profile picture but above the hero content */
 }
 
 /* Sections */
@@ -314,3 +314,81 @@ footer {
         opacity: 0.15;
     }
 }
+/* Skills Section */
+#skills {
+    padding: 4rem 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-card {
+    width: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.circular-progress {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #3498db calc(var(--percentage) * 1%), #dfe6e9 calc(var(--percentage) * 1%)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;  
+}
+
+.circular-progress::before {
+    content: '';
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-container {
+        justify-content: center;
+    }
+
+    .skill-card {
+        margin-bottom: 2rem;
+    }
+}  
